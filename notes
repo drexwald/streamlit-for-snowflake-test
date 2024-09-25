@@ -1,4 +1,7 @@
 python3 -m venv venv
+
+virtualenv ./venv --python=python3.11
+
 source venv/bin/activate
 source  /Users/pikeche/Documents/dbt/udemy/streamlit-for-snowflake-test/venv/bin/activate
 
@@ -6,9 +9,12 @@ xcode-select --install
 pip install watchdog
 
 pip install -r ./first-app/requirements.txt
+pip install -r ./connection/requirements.txt
 
 streamlit run app1.py
 cntrl + c
 
 ## demo project
 streamlit hello
+
+snowsql -c streamlit
