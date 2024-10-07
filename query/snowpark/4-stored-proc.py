@@ -7,7 +7,7 @@ session = _utils.getSession()
 
 @sproc(name="calc_new_sals",
   is_permanent=True, stage_location="@mystage", replace=True,
-  packages=["snowflake-snowpark-python==1.10.0"])
+  packages=["snowflake-snowpark-python==1.20.0"])
 def compute(session: Session) -> str:
 
   # get average salary in a department

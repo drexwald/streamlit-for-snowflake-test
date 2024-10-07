@@ -7,7 +7,7 @@ def getSession():
         "user": 'pikeche@phdata.io',
         "authenticator": 'externalbrowser',
         "database": 'SANDBOX',
-        "schema": 'STREAMLIT',
+        "schema": 'PIKECHE',
         "warehouse": 'SANDBOX_WH',
         "role": 'DATAENGINEERING_ALL'   
     }).create()

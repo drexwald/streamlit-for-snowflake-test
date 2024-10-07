@@ -8,7 +8,7 @@ def getConnection():
         authenticator = 'externalbrowser',
         # password=os.environ['SNOWSQL_PWD'],
         database='SANDBOX',
-        schema='STREAMLIT',
+        schema='PIKECHE',
         role='DATAENGINEERING_ALL',
         warehouse='SANDBOX_WH'
     )

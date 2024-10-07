@@ -11,7 +11,7 @@ def getSession(connection_name="snowflake"):
     pars = {
         "account": section["account"],
         "user": section["user"],
-        "password": os.environ["SNOWSQL_PWD"],
+        "authenticator": section["authenticator"],
         "database": section["database"],
         "schema": section["schema"],
         "role": section["role"],

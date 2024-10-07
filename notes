@@ -3,7 +3,7 @@ python3 -m venv venv
 virtualenv ./venv --python=python3.11
 
 source venv/bin/activate
-source  /Users/pikeche/Documents/dbt/udemy/streamlit-for-snowflake-test/venv/bin/activate
+source  /Users/pikeche/Documents/snowflake/udemy/streamlit-for-snowflake-test/venv/bin/activate
 
 xcode-select --install
 pip install watchdog
