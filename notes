@@ -18,3 +18,23 @@ cntrl + c
 streamlit hello
 
 snowsql -c streamlit
+
+select * from information_schema.packages
+where package_name like 'snowflake-snowpark%'
+and runtime_version = '3.11';
+
+create or replace stage mystage;
+
+
+
+create view emp_dept
+as
+    select '(company)' as child, null as parent
+    union
+    select distinct department, '(company)'
+    from employees
+    union
+    select employee_name, department
+    from employees;
+
+select * from emp_dept;
