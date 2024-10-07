@@ -50,7 +50,7 @@ def getLocalSession():
     return getSession(
         parser.get(section, "accountname"),
         parser.get(section, "username"),
-        parser.get['authenticator'])
+        parser.ge('authenticator'))
 
 def getRemoteSession():
     session = None

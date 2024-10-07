@@ -8,11 +8,11 @@ st.title("Hierarchical Metadata Viewer")
 # customize with your own local connection parameters
 parser = configparser.ConfigParser()
 parser.read(os.path.join(os.path.expanduser('~'), ".snowsql/config"))
-section = "connections.demo_conn"
+section = "connections.streamlit"
 pars = {
     "account": parser.get(section, "accountname"),
     "user": parser.get(section, "username"),
-    "password": os.environ['SNOWSQL_PWD']
+    "authenticator": parser.get(section, "authenticator")
 }
 session = Session.builder.configs(pars).create()
 
@@ -21,7 +21,7 @@ tabDeps, tabLineage = st.tabs(["Object Dependencies", "Data Lineage"])
 with tabDeps:
     query = """
     select *
-    from snowflake.account_usage.object_dependencies
+    from snowflake.account_usage.object_dependencies limit 3
     """
     rows = session.sql(query).collect()
 
