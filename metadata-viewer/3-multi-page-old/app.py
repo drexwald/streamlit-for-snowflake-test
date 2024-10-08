@@ -12,7 +12,7 @@ section = "connections.demo_conn"
 pars = {
     "account": parser.get(section, "accountname"),
     "user": parser.get(section, "username"),
-    "password": os.environ['SNOWSQL_PWD']
+    "authenticator": parser.get(section, "authenticator")
 }
 session = Session.builder.configs(pars).create()
 

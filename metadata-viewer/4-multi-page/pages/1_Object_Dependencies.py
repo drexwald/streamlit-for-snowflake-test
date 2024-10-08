@@ -6,7 +6,7 @@ st.set_page_config("Object Dependencies", layout="wide")
 st.title("Hierarchical Metadata Viewer")
 st.header("Object Dependencies")
 
-query = "select * from snowflake.account_usage.object_dependencies"
+query = "select * from snowflake.account_usage.object_dependencies limit 3"
 rows = utils.getSession().sql(query).collect()
 
 ids, nodes, edges = set(), "", ""

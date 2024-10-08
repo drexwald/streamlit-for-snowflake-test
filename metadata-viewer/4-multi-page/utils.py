@@ -13,6 +13,6 @@ def getSession():
         pars = {
             "account": parser.get(section, "accountname"),
             "user": parser.get(section, "username"),
-            "password": os.environ['SNOWSQL_PWD']
+            "authenticator": parser.get(section, "authenticator")
         }
         return Session.builder.configs(pars).create()
