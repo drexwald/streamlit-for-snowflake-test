@@ -46,11 +46,11 @@ def getSession(account, user, authenticator):
 def getLocalSession():
     parser = configparser.ConfigParser()
     parser.read(os.path.join(os.path.expanduser('~'), ".snowsql/config"))
-    section = "connections.demo_conn"
+    section = "connections.streamlit"
     return getSession(
         parser.get(section, "accountname"),
         parser.get(section, "username"),
-        parser.ge('authenticator'))
+        parser.get('authenticator'))
 
 def getRemoteSession():
     session = None
