@@ -1,0 +1,8 @@
+streamlit
+openai
+requests_html
+html2text
+lxml_html_clean
+llama-index
+watchdog
+numpy<2.0.0
