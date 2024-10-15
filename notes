@@ -22,3 +22,6 @@ snowsql -c streamlit
 pip3 install llama-index --upgrade --no-cache-dir --force-reinstall
 
 brew install numpy
+
+
+snowsql -c streamlit -f deploy.sql
